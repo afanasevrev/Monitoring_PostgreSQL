@@ -12,15 +12,15 @@ public class EventsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "current_date")
-    private String current_date;
+    @Column(name = "today_date")
+    private String today_date;
     @Column(name = "user")
     private String user;
     @Column(name = "action")
     private String action;
     public EventsEntity() {}
-    public EventsEntity(String current_date, String user, String action) {
-        this.current_date = current_date;
+    public EventsEntity(String today_date, String user, String action) {
+        this.today_date = today_date;
         this.user = user;
         this.action = action;
     }
