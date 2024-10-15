@@ -14,14 +14,14 @@ public class EventsEntity {
     private Long id;
     @Column(name = "today_date")
     private String today_date;
-    @Column(name = "user")
-    private String user;
+    @Column(name = "client")
+    private String client;
     @Column(name = "action")
     private String action;
     public EventsEntity() {}
-    public EventsEntity(String today_date, String user, String action) {
+    public EventsEntity(String today_date, String client, String action) {
         this.today_date = today_date;
-        this.user = user;
+        this.client = client;
         this.action = action;
     }
 }
