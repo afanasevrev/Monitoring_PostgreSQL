@@ -20,8 +20,9 @@ public class ActivityMonitorService {
                 // Обработайте результаты и сохраните данные
                 String user = rs.getString("usename");
                 String query = rs.getString("query");
+                String query_start = rs.getString("query_start");
                 // Сохранение данных в свою таблицу
-                System.out.println(user + " | " + query);
+                System.out.println(user + " | " + query + " | " + query_start);
             }
         } catch (SQLException e) {
             e.printStackTrace();
