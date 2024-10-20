@@ -20,6 +20,7 @@ public class ActivityMonitorService {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement stmt = connection.prepareStatement("SELECT * FROM pg_stat_activity");
              ResultSet rs = stmt.executeQuery()) {
+                listEvents.clear();
              while (rs.next()) {
                 // Обработайте результаты и сохраните данные
                 String user = rs.getString("usename");
