@@ -10,6 +10,6 @@ public class ActivityController {
     private DataSource dataSource;
     @GetMapping("/")
     private String getInfo() {
-        return "GET-INFO";
+        return "main";
     }
 }
