@@ -21,8 +21,10 @@ public class ActivityMonitorService {
                 String user = rs.getString("usename");
                 String query = rs.getString("query");
                 String query_start = rs.getString("query_start");
+                String client_addr = rs.getString("client_addr");
+                String application_name = rs.getString("application_name");
                 // Сохранение данных в свою таблицу
-                System.out.println(user + " | " + query + " | " + query_start);
+                System.out.println(user + " | " + query + " | " + query_start + " | " + client_addr + " | " + application_name);
             }
         } catch (SQLException e) {
             e.printStackTrace();
