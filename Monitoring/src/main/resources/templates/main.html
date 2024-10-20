@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="container">
-    <h1>Список табачной продукции</h1>
-    <span th:if="${products.size() == 0}">Мониторинг событий в СУБД PostgreSQL</span>
-    <table th:if="${products.size() > 0}" class="table table-hover">
+    <h1>Мониторинг</h1>
+    <span th:if="${listEvents.size() == 0}">Мониторинг событий в СУБД PostgreSQL</span>
+    <table th:if="${listEvents.size() > 0}" class="table table-hover">
         <thead class="thead-dark">
         <tr>
             <td>Логин</td>
@@ -22,11 +22,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="product : ${products}">
-            <td th:text="${product.id}"/>
-            <td th:text="${product.productName}"/>
-            <td th:text="${product.price}"/>
-            <td><a class="btn btn-secondary" th:href="@{'/details/' + ${product.id}}">Выбрать</a></td>
+        <tr th:each="event : ${listEvents}">
+            <td th:text="${event.mon_usename}"/>
+            <td th:text="${event.mon_query}"/>
+            <td th:text="${event.mon_date}"/>
+            <td th:text="${event.mon_address}"/>
+            <td th:text="${event.mon_application}"/>
+            <!-- <td><a class="btn btn-secondary" th:href="@{'/details/' + ${product.id}}">Выбрать</a></td> -->
         </tr>
         </tbody>
     </table>
