@@ -10,15 +10,15 @@
 <body>
 <div class="container">
     <h1>Список табачной продукции</h1>
-    <span th:if="${products.size() == 0}">Список табачной продукции</span>
+    <span th:if="${products.size() == 0}">Мониторинг событий в СУБД PostgreSQL</span>
     <table th:if="${products.size() > 0}" class="table table-hover">
         <thead class="thead-dark">
         <tr>
-            <td>ID</td>
-            <td>Наименование товара</td>
-            <td>Цена</td>
-            <td></td>
-            <td></td>
+            <td>Логин</td>
+            <td>Событие</td>
+            <td>Время возникновения</td>
+            <td>Адрес запроса</td>
+            <td>Приложение</td>
         </tr>
         </thead>
         <tbody>
