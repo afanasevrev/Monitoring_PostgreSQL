@@ -8,13 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 @RestController
 public class ActivityController {
     @Autowired
     private DataSource dataSource;
     @GetMapping("/")
     private String getInfo() {
+        /**
         try (Connection connection = dataSource.getConnection();
              PreparedStatement stmt = connection.prepareStatement("SELECT * FROM pg_stat_activity");
              ResultSet rs = stmt.executeQuery()) {
@@ -26,6 +26,7 @@ public class ActivityController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+         **/
         return "GET-INFO";
     }
 }
