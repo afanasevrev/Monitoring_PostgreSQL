@@ -26,9 +26,11 @@ public class EventsServiceImpl implements EventsService {
     @Override
     public String updateEvent(EventsEntity entity, Long id) {
         EventsEntity eventsEntity = eventsRepository.findById(id).get();
-        eventsEntity.setToday_date(entity.getToday_date());
-        eventsEntity.setAction(entity.getAction());
-        eventsEntity.setClient(entity.getClient());
+        eventsEntity.setMon_usename(entity.getMon_usename());
+        eventsEntity.setMon_query(entity.getMon_query());
+        eventsEntity.setMon_date(entity.getMon_date());
+        eventsEntity.setMon_address(entity.getMon_address());
+        eventsEntity.setMon_application(entity.getMon_application());
         eventsRepository.save(eventsEntity);
         return "Событие с ID = " + id + " успешно обновлено в БД";
     }
