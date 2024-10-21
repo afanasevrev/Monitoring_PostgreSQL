@@ -28,10 +28,9 @@ public class ActivityMonitorService {
                 String query_start = rs.getString("query_start");
                 String client_addr = rs.getString("client_addr");
                 String application_name = rs.getString("application_name");
-
-                listEvents.add(new EventsEntity(user, query, query_start, client_addr, application_name));
-
-                //System.out.println(user + " | " + query + " | " + query_start + " | " + client_addr + " | " + application_name);
+                if (!query.equals("") && !query_start.equals("")) {
+                    listEvents.add(new EventsEntity(user, query, query_start, client_addr, application_name));
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
